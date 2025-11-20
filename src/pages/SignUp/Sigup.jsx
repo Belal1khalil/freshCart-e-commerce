@@ -380,6 +380,13 @@
 
 
 
+
+
+
+
+
+
+
 import {
   faShieldHalved,
   faStar,
@@ -473,15 +480,15 @@ export default function Signup() {
         title="Sign Up - Fresh Cart"
         description="Create a new Fresh Cart account to start shopping for fresh groceries."
       />
-      <main className="py-6 sm:py-12">
-        <div className="container grid lg:grid-cols-2 lg:gap-12">
+      <main className="min-h-screen py-4 md:py-12 bg-gray-50">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 lg:gap-12">
           {/* left side */}
-          <div className=" hidden lg:block  space-y-8 py-10">
+          <div className="hidden lg:block space-y-8 py-10">
             <div className="welcome-msg">
               <h2 className="text-4xl font-bold">
                 Welcome to <span className="text-primary-500 ">FreshCart</span>
               </h2>
-              <p className="text-lg  mt-2">
+              <p className="text-lg mt-2">
                 Join thousands of happy customers who enjoy fresh groceries
                 delivered <br></br>right to their doorstep.
               </p>
@@ -522,7 +529,7 @@ export default function Signup() {
                 </div>
               </li>
             </ul>
-            <div className="review  p-6 rounded-lg bg-white shadow-md space-y-2 ">
+            <div className="review p-6 rounded-lg bg-white shadow-md space-y-2">
               <div className="flex items-center gap-3">
                 <img
                   src={profileimage}
@@ -531,7 +538,7 @@ export default function Signup() {
                 />
                 <div>
                   <h4>Sarah Johnson</h4>
-                  <div className="rating *:text-yellow-400 ">
+                  <div className="rating *:text-yellow-400">
                     <FontAwesomeIcon icon={faStar} />
                     <FontAwesomeIcon icon={faStar} />
                     <FontAwesomeIcon icon={faStar} />
@@ -540,7 +547,7 @@ export default function Signup() {
                   </div>
                 </div>
               </div>
-              <blockquote className="text-gray-700 italic ">
+              <blockquote className="text-gray-700 italic">
                 <p>
                   "FreshCart has transformed my grocery shopping experience. The
                   quality of the products is exceptional, and the convenience of
@@ -551,41 +558,41 @@ export default function Signup() {
             </div>
           </div>
           {/* right side */}
-          <div className="bg-white shadow-xl rounded-xl p-6 sm:p-10 space-y-4 sm:space-y-8">
+          <div className="bg-white shadow-xl rounded-xl p-4 sm:p-6 md:p-8 lg:p-10 space-y-6 md:space-y-8 mx-auto w-full max-w-md lg:max-w-full">
             <div className="text-center">
-              <h2 className="text-3xl font-semibold ">Create Your Account</h2>
-              <p className="mt-1">Start your journey with FreshCart today!</p>
+              <h2 className="text-2xl sm:text-3xl font-semibold">Create Your Account</h2>
+              <p className="mt-1 text-sm sm:text-base">Start your journey with FreshCart today!</p>
             </div>
-            <div className=" flex gap-2  *:flex *:items-center *:justify-center *:w-full *:gap-2 *:hover:bg-gray-100 *:transition:colors *:duration-300 flex-wrap ">
-              <button className="btn bg-transparent border border-gray-400/40 ">
+           <div className=" flex gap-2  *:flex *:items-center *:justify-center *:w-full *:gap-2 *:hover:bg-gray-100 *:transition:colors *:duration-300 flex-wrap ">
+             <button className="btn bg-transparent border border-gray-400/40 ">
                 <FontAwesomeIcon icon={faGoogle} className="text-red-500" />
-                <span>Google</span>
+                 <span>Google</span>
               </button>
               <button className="btn bg-transparent border border-gray-400/40 ">
-                <FontAwesomeIcon icon={faFacebook} className="text-blue-600" />
-                <span>Facebook</span>
+               <FontAwesomeIcon icon={faFacebook} className="text-blue-600" />
+               <span>Facebook</span>
               </button>
             </div>
-            <div className=" relative w-full h-0.5 bg-gray-300/30">
-              <span className="absolute left-1/2 top-1/2 -translate-1/2 px-4 bg-white">
+            <div className="relative w-full h-0.5 bg-gray-300/30">
+              <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 px-4 bg-white text-sm text-gray-500">
                 or
               </span>
             </div>
-            <form className="space-y-4 sm:space-y-7" onSubmit={formik.handleSubmit}>
+            <form className="space-y-4 md:space-y-6" onSubmit={formik.handleSubmit}>
               <div className="name flex flex-col gap-1">
-                <label htmlFor="name">Name*</label>
+                <label htmlFor="name" className="text-sm font-medium">Name*</label>
                 <input
                   type="text"
                   id="name"
                   placeholder="Ali"
-                  className="form-control"
+                  className="form-control text-sm p-2 md:p-3"
                   name="name"
                   onChange={formik.handleChange}
                   value={formik.values.name}
                   onBlur={formik.handleBlur}
                 />
                 {formik.touched.name && formik.errors.name ? (
-                  <div className="text-sm text-red-600">
+                  <div className="text-xs text-red-600">
                     *{formik.errors.name}
                   </div>
                 ) : (
@@ -594,19 +601,19 @@ export default function Signup() {
               </div>
 
               <div className="Email flex flex-col gap-1">
-                <label htmlFor="email">Email*</label>
+                <label htmlFor="email" className="text-sm font-medium">Email*</label>
                 <input
                   type="email"
                   id="email"
                   placeholder="ali@example.com"
-                  className="form-control"
+                  className="form-control text-sm p-2 md:p-3"
                   name="email"
                   onChange={formik.handleChange}
                   value={formik.values.email}
                   onBlur={formik.handleBlur}
                 />
                 {formik.touched.email && formik.errors.email ? (
-                  <div className="text-sm text-red-600">
+                  <div className="text-xs text-red-600">
                     *{formik.errors.email}
                   </div>
                 ) : (
@@ -614,58 +621,58 @@ export default function Signup() {
                 )}
 
                 {isExistError && (
-                  <p className="text-red-500"> *{isExistError}</p>
+                  <p className="text-red-500 text-xs">*{isExistError}</p>
                 )}
               </div>
 
               <div className="Password flex flex-col gap-1">
-                <label htmlFor="password">Password*</label>
+                <label htmlFor="password" className="text-sm font-medium">Password*</label>
                 <input
                   type="password"
                   id="password"
                   placeholder="create a strong password"
-                  className="form-control"
+                  className="form-control text-sm p-2 md:p-3"
                   name="password"
                   onChange={formik.handleChange}
                   value={formik.values.password}
                   onBlur={formik.handleBlur}
                 />
                 {formik.touched.password && formik.errors.password ? (
-                  <div className="text-sm text-red-600">
+                  <div className="text-xs text-red-600">
                     *{formik.errors.password}
                   </div>
                 ) : (
-                  <p className="text-sm mt-2">
+                  <p className="text-xs mt-1 text-gray-500">
                     Must be at least 8 characters with numbers and symbols
                   </p>
                 )}
 
                 {formik.values.password && (
-                  <div className="password-strength flex items-center gap-3">
+                  <div className="password-strength flex items-center gap-2 mt-2">
                     <div className="bar rounded-xl overflow-hidden w-full h-1 bg-gray-200">
                       <div
-                        className={`progress ${PasswordStrength.background} ${PasswordStrength.width}  h-full `}
+                        className={`progress ${PasswordStrength.background} ${PasswordStrength.width} h-full`}
                       ></div>
                     </div>
-                    <span className="text-nowrap w-28 text-center text-xs sm:text-sm">{`${PasswordStrength.text}`}</span>
+                    <span className="text-nowrap w-20 text-center text-xs">{`${PasswordStrength.text}`}</span>
                   </div>
                 )}
               </div>
 
               <div className="rePassword flex flex-col gap-1">
-                <label htmlFor="rePassword">Confirm Password*</label>
+                <label htmlFor="rePassword" className="text-sm font-medium">Confirm Password*</label>
                 <input
                   type="password"
                   id="repPassword"
                   placeholder="confirm your password"
-                  className="form-control"
+                  className="form-control text-sm p-2 md:p-3"
                   name="rePassword"
                   onChange={formik.handleChange}
                   value={formik.values.rePassword}
                   onBlur={formik.handleBlur}
                 />
                 {formik.touched.rePassword && formik.errors.rePassword ? (
-                  <div className="text-sm text-red-600">
+                  <div className="text-xs text-red-600">
                     *{formik.errors.rePassword}
                   </div>
                 ) : (
@@ -674,19 +681,19 @@ export default function Signup() {
               </div>
 
               <div className="phone flex flex-col gap-1">
-                <label htmlFor="phone">Phone*</label>
+                <label htmlFor="phone" className="text-sm font-medium">Phone*</label>
                 <input
                   type="tel"
                   id="phone"
                   placeholder="123-456-7890"
-                  className="form-control"
+                  className="form-control text-sm p-2 md:p-3"
                   name="phone"
                   onChange={formik.handleChange}
                   value={formik.values.phone}
                   onBlur={formik.handleBlur}
                 />
                 {formik.touched.phone && formik.errors.phone ? (
-                  <div className="text-sm text-red-600">
+                  <div className="text-xs text-red-600">
                     *{formik.errors.phone}
                   </div>
                 ) : (
@@ -694,19 +701,19 @@ export default function Signup() {
                 )}
               </div>
 
-              <div className="terms ">
-                <div className="flex items-center gap-2">
+              <div className="terms">
+                <div className="flex items-start gap-2">
                   <input
                     type="checkbox"
                     id="terms"
-                    className="accent-primary-600 size-4 "
+                    className="accent-primary-600 size-4 mt-0.5 flex-shrink-0"
                     name="terms"
                     onChange={formik.handleChange}
                     value={formik.values.terms}
                     onBlur={formik.handleBlur}
                   />
 
-                  <label htmlFor="terms">
+                  <label htmlFor="terms" className="text-sm text-gray-700">
                     I agree to{" "}
                     <Link to={`/terms`} className="text-primary-600 underline">
                       Terms of Services
@@ -721,7 +728,7 @@ export default function Signup() {
                   </label>
                 </div>
                 {formik.touched.terms && formik.errors.terms ? (
-                  <div className="text-sm text-red-600 mt-2  ">
+                  <div className="text-xs text-red-600 mt-1">
                     *{formik.errors.terms}
                   </div>
                 ) : (
@@ -731,15 +738,15 @@ export default function Signup() {
 
               <button
                 type="submit"
-                className="btn  w-full bg-primary-600 text-white flex justify-center items-center gap-2 hover:bg-primary-700 "
+                className="btn w-full bg-primary-600 text-white flex justify-center items-center gap-2 hover:bg-primary-700 py-2 md:py-3 text-sm md:text-base font-medium"
               >
                 <FontAwesomeIcon icon={faUserPlus} />
                 <span>Create My Account</span>
               </button>
             </form>
-            <p className="text-center pt-8  border-t-2 border-gray-300/50">
-              Already have an account ?{" "}
-              <Link to={`/login`} className="text-primary-600 underline">
+            <p className="text-center pt-6 border-t border-gray-300/50 text-sm">
+              Already have an account?{" "}
+              <Link to={`/login`} className="text-primary-600 underline font-medium">
                 Sign in
               </Link>
             </p>
@@ -749,4 +756,3 @@ export default function Signup() {
     </>
   );
 }
-
