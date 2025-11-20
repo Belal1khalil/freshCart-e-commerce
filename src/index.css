@@ -57,16 +57,4 @@
 
 
 
-.swiper-button-prev,
-.swiper-button-next {
-  @apply size-12! rounded-full bg-primary-500/50  flex justify-center items-center  ;
-}
 
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  @apply text-lg!  font-bold text-white;
-}
-
-.swiper-pagination-bullet-active {
-  @apply w-4! rounded-full! bg-white!
-}

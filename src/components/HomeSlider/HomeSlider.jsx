@@ -14,9 +14,9 @@ export default function HomeSlider() {
    slidesPerView={1}
    loop={true}
    modules={[Navigation ,Pagination , Autoplay]}
-   navigation
+   
    pagination = {{clickable: true}}
-//    autoplay={{delay:3000}}
+   autoplay={{delay:3000}}
    >
      <SwiperSlide>
         <div style={{

@@ -41,7 +41,7 @@ useEffect(()=>{
    <>
     <section>
       <div className="container">
-        <div className='flex justify-between items-center'>
+        <div className='flex justify-between items-center flex-wrap gap-6 mb-6'>
          <div className='space-y-2'>
            <h2 className='text-2xl font-bold text-black '>Deals of the Day</h2>
             <div className='flex gap-3 items-center'>
