@@ -25,6 +25,7 @@ export const WishListContext = createContext(null);
         }
   
       } catch (error) {
+        toast.error(error.message);
         setIsLoading(false);
         setIsError(true);
         setErrorMessage(error)

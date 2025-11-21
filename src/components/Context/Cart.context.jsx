@@ -23,6 +23,7 @@ export default function CartProvider({ children }) {
                 setCartInfo(response.data);
             }
         } catch (error) {
+            toast.error(error.message);
             setIsLoading(false);
             setIsError(true);
             setErrorMessage(error.message);
