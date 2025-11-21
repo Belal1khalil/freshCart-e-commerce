@@ -8,6 +8,7 @@ import {
   faBabyCarriage,
   faBars,
   faBolt,
+  faBoxesStacked,
   faChevronCircleDown,
   faChevronDown,
   faEllipsis,
@@ -19,6 +20,7 @@ import {
   faShoppingCart,
   faSpinner,
   faSuitcaseMedical,
+  faTags,
   faUserPlus,
   faWifi,
   faXmark,
@@ -386,6 +388,7 @@ export default function Navbar() {
                 <ul className="   *:hover:bg-gray-100 transition-colors duration-300 space-y-2 mt-3">
                   <li>
                     <NavLink
+                     onClick={toggleMenu}
                       to={`/account/wishlist`}
                       className={({ isActive }) => {
                         return `${
@@ -400,6 +403,7 @@ export default function Navbar() {
 
                   <li>
                     <NavLink
+                      onClick={toggleMenu}
                       to={`/cart`}
                       className={({ isActive }) => {
                         return `${
@@ -426,6 +430,7 @@ export default function Navbar() {
 
                   <li>
                     <NavLink
+                      onClick={toggleMenu}
                       to={`/account/account-info`}
                       className={({ isActive }) => {
                         return `${
@@ -437,6 +442,51 @@ export default function Navbar() {
                       <span className="text-sm">Account</span>
                     </NavLink>
                   </li>
+                     <li>
+                    <NavLink
+                      onClick={toggleMenu}
+                      to={`/featured-products`}
+                      className={({ isActive }) => {
+                        return `${
+                          isActive ? "text-primary-600 bg-primay-100" : ""
+                        } flex gap-2 transition-colors duration-200  py-3 px-2`;
+                      }}
+                    >
+                    <FontAwesomeIcon icon={faBoxesStacked} className="text-xl" />
+                      <span className="text-sm">Featured Products</span>
+                    </NavLink>
+                  </li>
+                     <li>
+                    <NavLink
+                      onClick={toggleMenu}
+                      to={`/offers`}
+                      className={({ isActive }) => {
+                        return `${
+                          isActive ? "text-primary-600 bg-primay-100" : ""
+                        } flex gap-2 transition-colors duration-200  py-3 px-2`;
+                      }}
+                    >
+                     <FontAwesomeIcon className="text-red-500 text-xl" icon={faTags} />
+
+                      <span className="text-sm">Offers</span>
+                    </NavLink>
+                  </li>
+                     <li>
+                    <NavLink
+                      onClick={toggleMenu}
+                      to={`/brands`}
+                      className={({ isActive }) => {
+                        return `${
+                          isActive ? "text-primary-600 bg-primay-100" : ""
+                        } flex gap-2 transition-colors duration-200  py-3 px-2`;
+                      }}
+                    >
+                      <FontAwesomeIcon className="text-xl " icon={faTags} />
+                      <span className="text-sm">Brands</span>
+                    </NavLink>
+                  </li>
+
+            
                 </ul>
               </div>
               <div className="border-t-1 border-gray-300/50 pt-5">
@@ -446,6 +496,7 @@ export default function Navbar() {
                     <>
                       <li>
                         <NavLink
+                          onClick={toggleMenu}
                           to={`/signup`}
                           className={({ isActive }) => {
                             return `${
@@ -462,6 +513,7 @@ export default function Navbar() {
                       </li>
                       <li>
                         <NavLink
+                          onClick={toggleMenu}
                           to={`/login`}
                           className={({ isActive }) => {
                             return `${
