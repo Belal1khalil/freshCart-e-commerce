@@ -38,12 +38,7 @@ export default function WishList() {
             <p className="text-sm text-gray-500  "> {count || 0} items in your cart</p>
              {
               count > 0 ? <div className=' space-x-3'>
-              <button className='btn bg-transparent border-red-500 text-red-500 hover:bg-red-500 hover:text-white mt-2 '>
-                <FontAwesomeIcon className='mx-1' icon={faTrash}/>
-                Clear All</button>
-                <button className='btn bg-primary-500 hover:bg-primary-600 transition-colors duration-200 text-white mt-2 '>
-                <FontAwesomeIcon className='mx-1' icon={faShoppingCart}/>
-                Add All To Cart</button>
+              
             </div>:""
              }
           </div>
