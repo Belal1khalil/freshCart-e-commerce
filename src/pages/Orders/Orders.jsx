@@ -123,7 +123,7 @@ export default function Orders() {
                 {/* Order Direction */}
                 <div className="flex flex-col border-r border-gray-300 pe-4">
                   <span className="text-gray-500">Delivered To</span>
-                  <span>{order.shippingAddress.city}</span>
+                  <span>{order?.shippingAddress?.city}</span>
                   <span className="text-primary-600 text-[13px]">
                     on {new Date(order.createdAt).toDateString()}
                   </span>
